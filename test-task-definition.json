@@ -49,6 +49,7 @@
         }
     ],
     "family": "test-task-definition",
+    "taskRoleArn": "arn:aws:iam::992382377000:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::992382377000:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
     "revision": 1,

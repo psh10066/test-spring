@@ -1,17 +1,17 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:992382377000:task-definition/test-task-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:992382377000:task-definition/test-task-definition:11",
     "containerDefinitions": [
         {
-            "name": "test-registry",
+            "name": "test-container",
             "image": "992382377000.dkr.ecr.ap-northeast-2.amazonaws.com/test-registry",
             "cpu": 512,
             "memory": 471,
             "memoryReservation": 471,
             "portMappings": [
                 {
-                    "name": "test-registry-8080-tcp",
+                    "name": "test-container-8080-tcp",
                     "containerPort": 8080,
-                    "hostPort": 8080,
+                    "hostPort": 0,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
@@ -43,10 +43,9 @@
         }
     ],
     "family": "test-task-definition",
-    "taskRoleArn": "arn:aws:iam::992382377000:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::992382377000:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
-    "revision": 1,
+    "revision": 11,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -69,10 +68,10 @@
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
         },
         {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
+            "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
-            "name": "ecs.capability.execution-role-ecr-pull"
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
@@ -91,7 +90,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-11-02T11:39:18.127Z",
+    "registeredAt": "2024-11-04T10:38:45.714Z",
     "registeredBy": "arn:aws:iam::992382377000:root",
     "tags": []
 }

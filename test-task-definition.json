@@ -2,7 +2,7 @@
     "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:992382377000:task-definition/test-task-definition:1",
     "containerDefinitions": [
         {
-            "name": "test-registry",
+            "name": "test-container",
             "image": "992382377000.dkr.ecr.ap-northeast-2.amazonaws.com/test-registry",
             "cpu": 512,
             "memory": 471,
